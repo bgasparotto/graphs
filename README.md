@@ -110,3 +110,48 @@ practical in a handful of algorithms.
 **Cons**:
 - Less space efficient for denser graphs;
 - Edge weight lookup is O(E).
+
+## Problems in Graph Theory
+Questions to ask before working on a solution for a graph problem:
+1. Is the graph directed or undirected?
+2. Are the edges weighted?
+3. Is the graph likely to be sparse or dense?
+4. Which data structure I should use to represent it efficiently?
+
+### Shortest Path
+**Problem**: given a weighted graph, find the shortest path of edges from node A to node B.
+**Solutions**: BFS (unweighted graph), Dijkstra's, Bellman-Ford, Floyd-Warshall, A*, etc.
+
+### Connectivity
+**Problem**: does there exist a path between node A and node B?
+**Solutions**: union find data structure or any search algorithm (e.g DFS).
+
+### Negative Cycles
+**Problem**: does my weighted digraph have any negative cycles? If so, where?
+**Solutions**: Bellman-Ford and Floyd-Warshall.
+
+### Strongly Connected Components (SCC)
+**Problem**: self-contained cycles within a directed graph where every vertex in a given cycle can 
+reach every other vertex in the same cycle.
+**Solutions**: Tarjan's and Kosaraju's algorithm.
+
+### Traveling Salesman
+**Problem**: given a list of cities and the distances between each pair of cities, what is the
+shortest possible route that visits each city exactly once and returns to the origin city?
+**Solutions**: Held-Karp, branch and bound, and many approximation algorithms.
+
+### Bridges
+**Problem**: a bridge/cut edge is any edge in a graph whose removal increases the number of 
+connected components.
+
+### Articulation Points
+**Problem**: an articulation point/cut vertex is any node in a graph whose removal increases the
+number of connected components.
+
+### Minimum Spanning Tree (MST)
+**Problem**: subset of the edges of a connected, edge-weighted graph that connects all the vertices
+together, without any cycles and with the minimum possible total edge weight.
+**Solutions**: Krustal's, Prim's & Boruvka's algorithm.
+
+### Network Flow: Max Flow
+**Problem**: with an infinite input source how much "flow" can we push through the network?
