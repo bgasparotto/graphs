@@ -155,3 +155,22 @@ together, without any cycles and with the minimum possible total edge weight.
 
 ### Network Flow: Max Flow
 **Problem**: with an infinite input source how much "flow" can we push through the network?
+
+## Depth First Search (DFS) O(V+E)
+Plunges depth first into a graph without regard for which edge it takes next until it cannot go any
+further, at which point it backtracks and continues.
+
+- It's the most fundamental search algorithm used to explode nodes and edges of a graph;
+- Often used as a building block in other algorithms;
+- Super useful especially if augmented to perform other tasks.
+
+## Breadth First Search (BFS) O(V+E)
+Starts at some arbitrary node and explores the neighbour nodes first, before moving to the next
+level neighbours.
+
+It uses a **queue** to track which node to visit next. Upon reaching a new node, the algorithm adds
+it to the queue to visit it later.
+
+- Another most fundamental search algorithm used to explode nodes and edges;
+- Also often used as a building block in other algorithms;
+- Particularly useful for finding the *shortest path* on unweighted graphs.
